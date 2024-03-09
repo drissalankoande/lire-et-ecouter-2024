@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lire et écouter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.pinimg.com/736x/1c/1d/ad/1c1dad23d17b95e3b1fe195dadd834b0.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: violet; /* Changement de couleur en violet */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .center {
+            text-align: center;
+        }
+        /* Ajout de marges pour les sous-menus Forums et Contact */
+        .dropdown-content.forums {
+            margin-top: 20px;
+        }
+        .dropdown-content.contact {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Lire et écouter !</h1>
+        <h2>ACCUEIL</h2>
+        <p>
+            Bienvenue sur Lire et écouter ! Sur ce site, vous trouverez tous les livres du monde à lire et à écouter. Il sera possible de télécharger les livres, mais cette fonctionnalité est payante.
+        </p>
+        <p>
+            Il y aura une bibliothèque qui vous montrera vos livres lus et ceux en cours de lecture. De plus, des forums seront disponibles pour discuter de vos livres préférés avec d'autres utilisateurs. Vous pourrez également laisser des commentaires après avoir lu ou écouté des livres, ainsi que des évaluations ou des critiques.
+            <p>Merci de cliquer sur le menu pour plus d'option.</p>
+        </p>
+    </div>
+
+    <div class="center">
+        <div class="dropdown">
+            <button>Menu</button>            
+            <div class="dropdown-content">
+                <a href="ACCEUIL.html">ACCUEIL</a>
+                <div class="dropdown" id="livres">
+                    <a href="#">LIVRES</a>
+                    <div class="dropdown-content">
+                        <a href="lire.html">lire</a>
+                        <a href="ecouter.html">ecouter</a>
+                        <a href="quiz.html">quiz</a>
+                    </div>
+                </div>
+               
+
+
+
+
+                
+
+
+
+
+
+
+                <div class="dropdown-content">
+                    <a href="lireetecouter.Xoo.it">FORUMS</a> 
+                    <a href="#">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- You can add more sections as needed -->
+
+    <script>
+        // JavaScript pour afficher/cacher les sous-menus Livres
+        document.getElementById("livres").addEventListener("click", function() {
+            var subMenu = this.querySelector(".dropdown-content");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
